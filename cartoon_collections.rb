@@ -7,11 +7,17 @@ def greet_characters(array)
   end
 end
 
+%w(cat dog wombat).each_with_index { |item, index|
+  hash[item] = index
+}
+hash   #=> {"cat"=>0, "dog"=>1, "wombat"=>2}
+
+
 def list_dwarves(array)
   # Use `each_with_index` to enumerate over the provided array
   #
   # Print a numbered list of each element
-  array.index do |element|
+  array.each_with_index do |element, index|
     puts "#{(element.index + 1)}. #{element}"
   end
 end
