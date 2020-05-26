@@ -14,6 +14,7 @@ def list_dwarves(array)
   array.each do |element|
     puts "#{element.count}. #{element}"
   end
+  array
 end
 
 
